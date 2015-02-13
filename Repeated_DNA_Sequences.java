@@ -3,7 +3,7 @@ public class Solution {
         Set<String> result = new HashSet<String>();
         if(s == null||s.length()<10)
             return new ArrayList<String>();
-        int targetHash = 0, base = 7, multiple = 1;
+        int targetHash = 0, base = 7, multiple = 1;         //base can also be 5, b mod h; b and h  must be coprime
         for(int i=0; i<10; i++) {
             targetHash = targetHash*base + s.charAt(i);
             multiple *= base;
